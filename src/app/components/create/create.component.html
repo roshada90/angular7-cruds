@@ -1,0 +1,18 @@
+<div class="card border-info mb-3">
+  <div class="card-header">Creating Consumer</div>
+  <div class="card-body">
+    <div class="row">
+      <label class="col-sm-2" for="email">Email: </label>
+      <input type="text" class="col-sm-2" [(ngModel)]="consumerEmail" />
+    </div>
+    <div class="row">
+      <label class="col-sm-2" for="username">UserName: </label>
+      <input type="text" class="col-sm-2" [(ngModel)]="consumerUsername" />
+    </div>
+    <div class="row">
+      <label class="col-sm-2" for="phoneNo">Phone Number: </label>
+      <input type="text" class="col-sm-2" [(ngModel)]="consumerPhoneNo" />
+    </div>
+    <button class="btn btn-primary" (click)="saveConsumer()">Save</button>
+  </div>
+</div>

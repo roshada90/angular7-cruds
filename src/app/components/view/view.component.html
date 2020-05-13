@@ -1,0 +1,54 @@
+<div class="card border-info mb-3">
+  <div class="card-header">View a Customer</div>
+  <div class="card-body text-info">
+    <h5 class="card-title">Enter email of customer</h5>
+    <p class="card-text"></p>
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <input
+          type="email"
+          class="form-control"
+          id="inputEmail3"
+          [(ngModel)]="toSearchConsumerEmail"
+          placeholder="Consumer Email"
+        />
+      </div>
+      <div class="col-sm-2">
+        <button
+          type="button"
+          (click)="searchConsumer()"
+          class="btn btn-primary"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card border-info mb-3" *ngIf="viewwingConsumer">
+  <div class="card-header">
+    Viewing Consumer Information
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <label class="col-sm-2" for="email">Email: </label>
+      <p class="col-sm-2">{{ viewwingConsumer.email }}</p>
+    </div>
+    <div class="row">
+      <label class="col-sm-2" for="email">Created At: </label>
+      <p class="col-sm-2">{{ viewwingConsumer.createdAt.toLocaleString() }}</p>
+    </div>
+    <div class="row">
+      <label class="col-sm-2" for="email">Username: </label>
+      <p class="col-sm-2">{{ viewwingConsumer.username }}</p>
+    </div>
+    <div class="row">
+      <label class="col-sm-2" for="email">Phone Number: </label>
+      <p class="col-sm-2">{{ viewwingConsumer.phoneNo }}</p>
+    </div>
+    <div class="row">
+      <label class="col-sm-2" for="email">ID: </label>
+      <p class="col-sm-2">{{ viewwingConsumer.id }}</p>
+    </div>
+  </div>
+</div>

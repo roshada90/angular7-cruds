@@ -1,0 +1,55 @@
+<div class="card border-info mb-3">
+  <div class="card-header">Edit a Customer</div>
+  <div class="card-body text-info">
+    <h5 class="card-title">Enter email of customer</h5>
+    <p class="card-text"></p>
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <input
+          type="email"
+          class="form-control"
+          id="inputEmail3"
+          [(ngModel)]="toSearchConsumerEmail"
+          placeholder="Consumer Email"
+        />
+      </div>
+      <div class="col-sm-2">
+        <button
+          type="button"
+          (click)="searchConsumer()"
+          class="btn btn-primary"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card border-info mb-3" *ngIf="editingConsumer">
+  <div class="card-header">
+    Editing Consumer Information
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <label class="col-sm-2" for="email">Email: </label>
+      <input type="text" class="col-sm-2" [(ngModel)]="editingConsumer.email" />
+    </div>
+    <div class="row">
+      <label class="col-sm-2" for="email">Created At: </label>
+      <input
+        type="text"
+        class="col-sm-2"
+        [(ngModel)]="editingConsumer.username"
+      />
+    </div>
+    <div class="row">
+      <label class="col-sm-2" for="email">Username: </label>
+      <input
+        type="text"
+        class="col-sm-2"
+        [(ngModel)]="editingConsumer.phoneNo"
+      />
+    </div>
+    <button class="btn btn-primary" (click)="saveConsumer()">Save</button>
+  </div>
+</div>
